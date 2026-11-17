@@ -22,3 +22,8 @@ The site saves the complete guide as one document and checks for remote updates 
 
 GitHub Pages publishing instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
+
+
+## Private handwritten map
+
+The handwritten atlas photo and expedition card are stored in the separate `shared_trip_guide_assets` table in Supabase. The page requests them through `get_shared_guide_map` only after the invitation key has opened a valid trip. Direct table access is revoked, and the image data is not committed to this repository. Add this table and RPC with the SQL at the end of `supabase_setup.sql` when setting up another Supabase project.
